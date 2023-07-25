@@ -68,8 +68,8 @@
             </div>
         </form>
         <?php echo"<h2>總金額：".$total."</h2>"; ?>
-        <h2><a href="login.html">確認購買</h2>
-        <h2><a href="showCart.php">清空購物車</h2>
+        <h2><a href="finCart.html">確認購買</h2>
+        <h2><a href="cleanCart.php">清空購物車</h2>
     </div>
 </body>
 </html>
