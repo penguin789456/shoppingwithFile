@@ -52,6 +52,7 @@
     foreach ($file as $x) {
         array_push($product, explode(",", $x));
     }
+    $_SESSION["pd"]=array();
     $_SESSION["pd"]=$product;
     //set product array
     ?>
