@@ -18,6 +18,12 @@
         .container img{
             width: 250px;
         }
+        .table_Container{
+            width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            transform: translateX(-25%);
+        }
     </style>
 
 </head>
@@ -40,26 +46,28 @@
     ?>
     <div class="container">
         <h1>商品目錄</h1>
-        <table>
-            <?php
-                foreach ($product as $det) {
-                    echo "<tr>
-                    <td rowspan='3'><img src='pics\\".$det[3]."'></td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td colspan='2' style='text-align:center'><a href=>加入購物車</a></td>
-                </tr>";
-                }
-            ?>
+            <div class="table_Container">
+                <?php
+                    foreach ($product as $det) {
+                        echo "<table>
+                        <tr>
+                        <td rowspan='3'><img src='pics\\".$det[3]."'></td>
+                        <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td colspan='2' style='text-align:center'><a href=>加入購物車</a></td>
+                        </tr>
+                        </table>";
+                    }
+                ?>
+            </div>
     </div>
-    </table>
 </body>
 
 </html>
