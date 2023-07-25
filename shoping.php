@@ -39,11 +39,8 @@
 <body>
     <?php
     session_start();
-    $_SESSION["tel"] = $_POST["tel"];
-    if(isset($_SESSION["tel"])){
-        $userFileName = "user/" . $_POST["tel"] . ".txt";
-        $userFile = fopen($userFileName, 'a');
-        fclose($userFile);
+    if(!isset($_SESSION["tel"])){
+        $_SESSION["tel"] = $_POST["tel"];
     }
     //set user
     
