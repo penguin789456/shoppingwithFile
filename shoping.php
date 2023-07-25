@@ -52,6 +52,7 @@
     foreach ($file as $x) {
         array_push($product, explode(",", $x));
     }
+    $_SESSION["pd"]=$product;
     //set product array
     ?>
     <div class="container">
@@ -65,16 +66,16 @@
                         <table>
                         <tr>
                         <td rowspan='3'><img src='pics\\".$det[3]."'></td>
-                        <td name='ID'>ID：".$det[0]."</td>
+                        <td >ID：".$det[0]."</td>
                         </tr>
                         <tr>
-                            <td name='NAME'>名稱：".$det[1]."</td>
+                            <td>名稱：".$det[1]."</td>
                         </tr>
                         <tr>
-                            <td name='PRICE'>價格".$det[2]."</td>
+                            <td>價格".$det[2]."</td>
                         </tr>
                         <tr>
-                            <td colspan='2' style='text-align:center'><input type='submit' value='加入購物車'></td>
+                            <td colspan='2' style='text-align:center'><a href='shoppingObject.php?id=".$det[0]."'>加入購物車</a></td>
                         </tr>
                         </table>
                         ";
