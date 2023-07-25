@@ -12,7 +12,7 @@ if(isset($_SESSION["tel"])){
                     fwrite($fp,$value.",");
                     echo $value;
                 }else{
-                    fwrite($fp,$value."\n");
+                    fwrite($fp,$value);
                 }
             }
         }
