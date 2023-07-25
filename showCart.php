@@ -32,10 +32,13 @@
     </style>
     <?php 
         session_start();
-        $file=file("user/". $_SESSION["tel"].".txt");
-        $product = array();
-        foreach ($file as $x) {
+        $fileN="user/". $_SESSION["tel"].".txt";
+        if(file_exists($fileN)){
+            $file=file($fileN);
+            $product = array();
+            foreach ($file as $x) {
             array_push($product, explode(",", $x));
+        }
         }
     ?>
 </head>
@@ -47,25 +50,27 @@
             <div class="table_Container">
                 <?php
                     $total=0;
-                    foreach ($product as $det) {
-                        echo 
-                        "
-                        <table>
-                        <tr>
-                        <td rowspan='3'><img src='pics\\".$det[3]."'></td>
-                        <td >ID：".$det[0]."</td>
-                        </tr>
-                        <tr>
-                            <td>名稱：".$det[1]."</td>
-                        </tr>
-                        <tr>
-                            <td>價格".$det[2]."</td>
-                        </tr>
-                        </table>
-                        ";
-                        $total+=$det[2];
+                    if(isset($product)){
+                        foreach ($product as $det) {
+                            echo 
+                            "
+                            <table>
+                            <tr>
+                            <td rowspan='3'><img src='pics\\".$det[3]."'></td>
+                            <td >ID：".$det[0]."</td>
+                            </tr>
+                            <tr>
+                                <td>名稱：".$det[1]."</td>
+                            </tr>
+                            <tr>
+                                <td>價格".$det[2]."</td>
+                            </tr>
+                            </table>
+                            ";
+                            $total+=$det[2];
+                        }
+                        $_SESSION["total"]=$total;
                     }
-                    $_SESSION["total"]=$total;
                 ?>
             </div>
         </form>
