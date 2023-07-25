@@ -2,19 +2,21 @@
 session_start();
 $id=$_GET["id"];
 $productA=$_SESSION["pd"];
-$fileN="user/".$_SESSION["tel"].".txt";
-$fp=fopen($fileN,"a");
-foreach ($productA as $det) {
-    if (in_array($id,$det)){
-        foreach ($det as $value){
-            if(array_search($value,$det)!=count($det)-1){
-                fwrite($fp,$value.",");
-                echo $value;
-            }else{
-                fwrite($fp,$value."\n");
+if(isset($_SESSION["tel"])){
+    $fileN="user/".$_SESSION["tel"].".txt";
+    $fp=fopen($fileN,"a");
+    foreach ($productA as $det) {
+        if (in_array($id,$det)){
+            foreach ($det as $value){
+                if(array_search($value,$det)!=count($det)-1){
+                    fwrite($fp,$value.",");
+                    echo $value;
+                }else{
+                    fwrite($fp,$value."\n");
+                }
             }
         }
-    }
-};
-//header("location:shoping.php")
+    };
+}
+header("location:shoping.php")
 ?>
