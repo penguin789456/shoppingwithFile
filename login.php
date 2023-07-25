@@ -12,7 +12,7 @@
             height: auto;
         }
 
-        .container h1 {
+        .container h1,h2 {
             text-align: center;
         }
         .container img{
@@ -49,27 +49,34 @@
     ?>
     <div class="container">
         <h1>商品目錄</h1>
+        <form action='shopObject.php' method='post'>
             <div class="table_Container">
                 <?php
                     foreach ($product as $det) {
-                        echo "<table>
+                        echo 
+                        "
+                        <table>
                         <tr>
                         <td rowspan='3'><img src='pics\\".$det[3]."'></td>
-                        <td>ID：".$det[0]."</td>
+                        <td name='ID'>ID：".$det[0]."</td>
                         </tr>
                         <tr>
-                            <td>名稱：".$det[1]."</td>
+                            <td name='NAME'>名稱：".$det[1]."</td>
                         </tr>
                         <tr>
-                            <td>價格".$det[2]."</td>
+                            <td name='PRICE'>價格".$det[2]."</td>
                         </tr>
                         <tr>
-                            <td colspan='2' style='text-align:center'><a href=>加入購物車</a></td>
+                            <td colspan='2' style='text-align:center'><input type='submit' value='加入購物車'></td>
                         </tr>
-                        </table>";
+                        </table>
+                        
+                        ";
                     }
                 ?>
             </div>
+        </form>
+        <h2><a href="login.html">返回登入頁</h1>
     </div>
 </body>
 
