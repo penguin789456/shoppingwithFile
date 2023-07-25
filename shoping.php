@@ -82,7 +82,7 @@
             </div>
         </form>
         <h2><a href="login.html">返回登入頁</h1>
-        <h2><a href="saveCart.php">結帳</h1>
+        <h2><a href="showCart.php">結帳</h1>
     </div>
 </body>
 
