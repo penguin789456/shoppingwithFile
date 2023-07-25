@@ -19,10 +19,13 @@
             width: 250px;
         }
         .table_Container{
-            width: 800px;
+            width: 1500px;
             display: flex;
             flex-wrap: wrap;
-            transform: translateX(-25%);
+            transform: translateX(-35%);
+        }
+        td{
+            width: 200px;
         }
     </style>
 
@@ -52,13 +55,13 @@
                         echo "<table>
                         <tr>
                         <td rowspan='3'><img src='pics\\".$det[3]."'></td>
-                        <td>12</td>
+                        <td>ID：".$det[0]."</td>
                         </tr>
                         <tr>
-                            <td>123</td>
+                            <td>名稱：".$det[1]."</td>
                         </tr>
                         <tr>
-                            <td>123</td>
+                            <td>價格".$det[2]."</td>
                         </tr>
                         <tr>
                             <td colspan='2' style='text-align:center'><a href=>加入購物車</a></td>
