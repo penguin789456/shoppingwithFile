@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        table{
+            border-collapse:collapse;
+        }
         .container {
             margin: auto;
             width: 400px;
@@ -26,7 +29,9 @@
         }
         td{
             width: 200px;
+            border: 1px solid black;
         }
+
     </style>
 
 </head>
@@ -72,7 +77,6 @@
                             <td colspan='2' style='text-align:center'><input type='submit' value='加入購物車'></td>
                         </tr>
                         </table>
-                        
                         ";
                     }
                 ?>
