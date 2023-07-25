@@ -17,7 +17,7 @@
         date_default_timezone_set('Asia/Taipei'); //設定時間為台北時區
         $date = date('YmdHis');
         $content = "$date,$tel,$total";
-        fwrite($fp,"$content");
+        fwrite($fp,"$content"."\n");
         fclose($fp);
         echo "<h1>感謝購買總金額為：".$_SESSION["total"]."</h1>";
     ?>
