@@ -9,16 +9,25 @@
     #form1 table {
       font-size: large;
     }
+    body{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    table,td{
+      border: 1px solid black;
+      text-align:center;
+    }
   </style>
 </head>
 
 <body>
   <form id="form1" name="form1" method="post" action="shoping.php">
-    <table width="400" border="1" cellspacing="0" cellpadding="0" align="center">
-      <tr align="center">
+    <table width="400" cellspacing="0" cellpadding="0">
+      <tr>
         <td colspan="2">帳號登入</td>
       </tr>
-      <tr align="center">
+      <tr>
         <td width="200">電話號碼(10碼)：</td>
         <td>
           <label for="tel"></label>
@@ -26,7 +35,7 @@
         </td>
       </tr>
 
-      <tr align="center">
+      <tr >
         <td colspan="2"><input type="submit" name="button" id="button" value="送出" /></td>
       </tr>
     </table>
