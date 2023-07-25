@@ -42,6 +42,7 @@
 <body>
 <div class="container">
         <h1>商品目錄</h1>
+        <h2><a href="shoping.php">返回商品目錄</a></h2>
         <form action='shopObject.php' method='post'>
             <div class="table_Container">
                 <?php
@@ -64,6 +65,7 @@
                         ";
                         $total+=$det[2];
                     }
+                    $_SESSION["total"]=$total;
                 ?>
             </div>
         </form>
