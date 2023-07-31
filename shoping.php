@@ -5,35 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table{
-            border-collapse:collapse;
-        }
-        .container {
-            margin: auto;
-            width: 400px;
-            height: auto;
-        }
-
-        .container h1,h2 {
-            text-align: center;
-        }
-        .container img{
-            width: 250px;
-        }
-        .table_Container{
-            width: 1500px;
-            display: flex;
-            flex-wrap: wrap;
-            transform: translateX(-35%);
-        }
-        td{
-            width: 200px;
-            border: 1px solid black;
-        }
-
-    </style>
-
+    <link href="shoppingCss.css" rel="stylesheet">
 </head>
 
 <body>
